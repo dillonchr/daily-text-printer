@@ -1,0 +1,29 @@
+{
+  "name": "dailytext-printer",
+  "version": "1.0.0",
+  "description": "prints daily text hackishly",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 0",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillonchr/daily-text-printer.git"
+  },
+  "keywords": [
+    "daily",
+    "text",
+    "printer"
+  ],
+  "author": "@dillonchr",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dillonchr/daily-text-printer/issues"
+  },
+  "homepage": "https://github.com/dillonchr/daily-text-printer#readme",
+  "dependencies": {
+    "@dillonchr/dailytext": "^1.0.0",
+    "dotenv": "^6.2.0"
+  }
+}
