@@ -27,7 +27,24 @@ const receiptFormatter = text => {
     return result;
 };
 
+const centerLine = (line) => {
+    const empties = maxWidth - line.length;
+    const prefix = new Array(empties >> 1).fill(' ').join('');
+    return `${prefix}${line}`;
+};
+
 dailytext((err, text) => {
-    console.log(text);
+    const pieces = [];
+    const lineBreak = new Array(maxWidth).fill('-').join('');
+    pieces.push(centerLine(text.date));
+    pieces.push(lineBreak);
+    pieces.push('');
+    pieces.push(receiptFormatter(text.themeScripture));
+    pieces.push('');
+    pieces.push(centerLine(text.themeScriptureLocation));
+    pieces.push(lineBreak);
+    pieces.push('');
+    pieces.push(receiptFormatter(text.comments));
+    console.log(pieces.join('\n'));
 });
 
